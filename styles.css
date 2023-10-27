@@ -11,7 +11,325 @@ body {
     line-height: 1.6;
 }
 
-header {
+header {html, body {
+    height: 100vh;
+    overflow: hidden;
+    font-family: "Noto Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    position: static;
+    background-color: black;
+  }
+  
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('images/space.png') no-repeat center center fixed;
+    background-size: cover;
+    filter: brightness(95%); /* Adjust the brightness value as needed */
+    z-index: -1;
+  }
+  
+  .resume-links h2 {
+    user-select: none;
+    color: #fff;
+    margin-bottom: 5px;
+    font-size: 3vh;
+  }
+  
+  .resume-links {
+    color: #BCDFF5;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    font-size: 2vh;
+  }
+  
+  .resume-links a {
+    user-select: none;
+    color: #BCDFF5;
+    display: block;
+    margin-bottom: 5px;
+    text-decoration: none;
+    font-size: 2vh;
+  }
+  
+  .resume-links a:hover {
+    filter: grayscale(1);
+    font-weight: bold;
+  }
+  
+  canvas {
+    height: 100vh;
+    width: 100vw;
+    position: static;
+    z-index: 9;
+  }
+  
+  /* arc icons */
+  .arc-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+  }
+  
+  .arc-icon {
+    width: 4vh;
+    height: 4vh;
+    margin: 4vh;
+    filter: grayscale(0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  }
+  
+  .arc-icon:nth-child(2) {
+    margin: 0;
+  }
+  
+  .arc-icon:hover {
+    transform: scale(1.1);
+    filter: grayscale(0);
+  }
+  
+  .arc-icons:hover .arc-icon {
+    transform: scale(1);
+  }
+  
+  .arc-icons:hover .arc-icon:hover {
+    transform: scale(1.1);
+  }
+  
+  .arc-icon:active {
+    transform: scale(0.9);
+  }
+  
+  .mail-to-copy {
+    color: #BCDFF5;
+    margin: 0;
+  }
+  /* Media Queries */
+  @media (max-width: 100px) {
+    .arc-icon {
+      width: 2vh;
+      height: 2vh;
+      margin: 0; /* Adjust the margin as needed */
+    }
+    figure{
+      margin: 0;
+    }
+    div{
+      margin: 0;
+    }
+  }
+  
+  @media (min-width: 101px) and (max-width: 200px) {
+    .arc-icon {
+      width: 3vh;
+      height: 3vh;
+      margin: 0; /* Adjust the margin as needed */
+    }
+    figure{
+      margin: 1vh;
+    }
+    div{
+      margin: 0;
+    }
+  }
+  
+  @media (min-width: 201px) and (max-width: 300px) {
+    .arc-icon {
+      width: 3vh;
+      height: 3vh;
+      margin: 0; /* Adjust the margin as needed */
+    }
+    figure{
+      margin: 1vh;
+    }
+    div{
+      margin: 0;
+    }
+  }
+  @media (min-width: 301px) and (max-width: 400px) {
+    .arc-icon {
+      width: 3vh;
+      height: 3vh;
+      margin: 0; /* Adjust the margin as needed */
+    }
+    figure{
+      margin: 1vh;
+    }
+    div{
+      margin: 0;
+    }
+  }
+  @media (min-width: 401px) and (max-width: 500px) {
+    .arc-icon {
+      width: 3vh;
+      height: 3vh;
+      margin: 0; /* Adjust the margin as needed */
+    }
+    figure{
+      margin: 1vh;
+    }
+    div{
+      margin: 0;
+    }
+  }
+  @media (min-width: 501px) and (max-width: 600px) {
+    .arc-icon {
+      width: 3vh;
+      height: 3vh;
+      margin: 0; /* Adjust the margin as needed */
+    }
+    figure{
+      margin: 1vh;
+    }
+    div{
+      margin: 0;
+    }
+  }
+  @media (min-width: 601px) and (max-width: 700px) {
+    .arc-icon {
+      width: 3vh;
+      height: 3vh;
+      margin: 0; /* Adjust the margin as needed */
+    }
+    figure{
+      margin: 1vh;
+    }
+    div{
+      margin: 0;
+    }
+  }
+  @media (min-width: 701px) and (max-width: 800px) {
+    .arc-icon {
+      width: 5.5vh;
+      height: 5.5vh;
+      margin: 0; /* Adjust the margin as needed */
+    }
+    figure{
+      margin: 1vh;
+    }
+    div{
+      margin: 0;
+    }
+  }
+  @media (min-width: 801px) and (max-width: 900px) {
+    .arc-icon {
+      width: 6.6vh;
+      height: 6.6vh;
+      margin: 0; /* Adjust the margin as needed */
+    }
+    figure{
+      margin: 1vh;
+    }
+    div{
+      margin: 0;
+    }
+  }
+  
+  @media (min-width: 901px) and (max-width: 1000px) {
+    .arc-icon {
+      width: 7vh;
+      height: 7vh;
+      margin: 0; /* Adjust the margin as needed */
+    }
+    figure{
+      margin: 1vh;
+    }
+    div{
+      margin: 0;
+    }
+  }
+  
+  @media (min-width: 1001px) and (max-width: 1100px) {
+    .arc-icon {
+      width: 3.5vh;
+      height: 3.5vh;
+      margin: 0.2vh; /* Adjust the margin as needed */
+    }
+  
+  }
+  
+  @media (min-width: 1101px) and (max-width: 1200px) {
+    .arc-icon {
+      width: 4vh;
+      height: 4vh;
+      margin: 0; /* Adjust the margin as needed */
+    }
+  
+    div{
+      margin: 0;
+    }
+  }
+  
+  @media (min-width: 1201px) and (max-width: 1300px) {
+    .arc-icon {
+      width: 4vh;
+      height: 4vh;
+      margin: 1.7vh; /* Adjust the margin as needed */
+    }
+  }
+  @media (min-width: 1301px) and (max-width: 1400px) {
+    .arc-icon {
+      width: 5vh;
+      height: 5vh;
+      margin: 0vh; /* Adjust the margin as needed */
+    }
+  
+  }
+  
+  @media (min-width: 1401px) and (max-width: 1500px) {
+    .arc-icon {
+      width: 7vh;
+      height: 7vh;
+      margin: 0vh; /* Adjust the margin as needed */
+    }
+  
+  }
+  
+  @media (min-width: 1501px) and (max-width: 1600px) {
+    .arc-icon {
+      width: 8vh;
+      height: 8vh;
+      margin: 0vh; /* Adjust the margin as needed */
+    }
+  
+  }
+  
+  @media (min-width: 1601px) and (max-width: 1700px) {
+    .arc-icon {
+      width: 9vh;
+      height: 9vh;
+      margin: 0vh; /* Adjust the margin as needed */
+    }
+  
+  }
+  
+  @media (min-width: 1701px) and (max-width: 1800px) {
+    .arc-icon {
+      width: 9vh;
+      height: 9vh;
+      margin: 0vh; /* Adjust the margin as needed */
+    }
+  
+  }
+  
+  
+  
+  
     background-color: #000;
     padding: 20px;
 }
